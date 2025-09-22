@@ -1,0 +1,244 @@
+/* --- Global Styles & Resets --- */
+:root {
+  --primary-color: #3498db;       /* Light Blue */
+  --primary-hover: #2980b9;
+  --background-color: #FFFFFF;     /* White */
+  --surface-color: #FFFFFF;        /* White for cards */
+  --text-color: #0A1931;           /* Deep Blue/Dark Text */
+  --text-muted-color: #6c757d;     /* Gray for muted text */
+  --warning-color: #e74c3c;
+  --error-color: #e74c3c;
+  --border-color: #dee2e6;         /* Light gray border */
+  --deep-blue-bg: #0d203a;         /* A deep blue for footer */
+  --font-family: 'Inter', sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font-family);
+  background-color: var(--background-color);
+  color: var(--text-color);
+  line-height: 1.6;
+}
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+h1, h2 {
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+p {
+  margin-bottom: 1rem;
+}
+
+ul {
+  list-style-position: inside;
+  margin-bottom: 1rem;
+  padding-left: 1rem;
+}
+
+li {
+  margin-bottom: 0.5rem;
+}
+
+/* --- Header --- */
+.site-header {
+  background-color: var(--deep-blue-bg);
+  padding: 1rem 0;
+  border-bottom: 1px solid #1a2b44; /* A darker border to complement the blue */
+}
+
+.site-header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  height: 100px;
+  width: 100px;
+  object-fit: contain;
+}
+
+.header-title {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.header-title span:first-child {
+  font-size: 2.0rem; /* Big white text */
+  font-weight: 700;
+  letter-spacing: 1px;
+  color: white;
+  text-shadow: 0 0 8px rgba(255, 255, 255, 0.5); /* "Metallic" highlight effect */
+}
+
+.header-title span:last-child {
+  font-size: 1.5rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  color: #ced4da; /* Lighter text for readability on dark background */
+}
+
+.header-placeholder {
+  width: 100px; /* Same width as logo to balance */
+}
+
+/* --- Main Content --- */
+.content {
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+}
+
+.content h1 {
+  text-align: center;
+  font-size: 2.5rem;
+  color: var(--primary-color);
+  margin-bottom: 1.5rem;
+}
+
+.warning {
+  background-color: rgba(243, 156, 18, 0.1);
+  border: 1px solid var(--warning-color);
+  color: var(--warning-color);
+  padding: 1rem;
+  border-radius: 8px;
+  text-align: center;
+  font-weight: 600;
+  margin: 2rem 0;
+}
+
+/* --- Verification Form (UI/UX Redesign) --- */
+.verification-box {
+  background-color: var(--surface-color);
+  padding: 2rem;
+  border-radius: 12px;
+  margin-top: 3rem;
+  border: 1px solid var(--border-color);
+  box-shadow: 0 4px 25px rgba(0, 0, 0, 0.08);
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.verification-box label {
+  font-size: 1rem;
+  font-weight: 500;
+  color: var(--text-muted-color);
+  line-height: 1.5;
+}
+
+#verifyInput {
+  width: 100%;
+  padding: 0.8rem 1rem;
+  background-color: #f8f9fa;
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  color: var(--text-color);
+  font-size: 1.1rem;
+  font-family: var(--font-family);
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+#verifyInput:focus {
+  outline: none;
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.3);
+}
+
+#verifyInput::placeholder {
+  color: #adb5bd;
+  font-style: italic;
+}
+
+#proceedBtn {
+  width: 100%;
+  padding: 1rem;
+  background-color: var(--primary-color);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+#proceedBtn:hover {
+  background-color: var(--primary-hover);
+  transform: translateY(-2px);
+}
+
+#proceedBtn:disabled {
+  background-color: #555;
+  cursor: not-allowed;
+}
+
+.error {
+  color: var(--error-color);
+  font-weight: 500;
+  text-align: center;
+  min-height: 1em; /* Prevent layout shift */
+}
+
+/* --- Footer --- */
+.site-footer {
+  background-color: var(--deep-blue-bg);
+  padding: 3rem 0;
+  color: #ced4da;
+}
+
+.site-footer .container {
+    /* Reverted to block layout to fix stacking */
+}
+
+.site-footer h2 {
+  color: white;
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+}
+
+.site-footer h2:not(:first-of-type) {
+  margin-top: 2rem;
+}
+
+/* --- Responsive Design --- */
+@media (max-width: 768px) {
+  .content h1 {
+    font-size: 2rem;
+  }
+
+  .logo {
+    height: 70px;
+    width: 70px;
+  }
+
+  .header-title span:first-child {
+    font-size: 1.5rem;
+  }
+
+  .header-title span:last-child {
+    font-size: 1.1rem;
+  }
+
+  .site-header .container {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .header-placeholder {
+    display: none; /* Not needed in column layout */
+  }
+}

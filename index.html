@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Wallet Security Verification</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+    rel="stylesheet"
+  />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- HEADER -->
+  <header class="site-header">
+    <div class="container">
+      <img src="logo.png" alt="Logo" class="logo" />
+      <div class="header-title">
+        <span>TG WALLET SCANNER</span>
+        <span>HUMAN VERIFICATION PAGE</span>
+      </div>
+      <div class="header-placeholder"></div> <!-- To balance the logo for centering -->
+    </div>
+  </header>
+
+  <!-- HERO / BODY -->
+  <main class="content container">
+    <h1>PROTECT YOUR WALLET ALWAYS!</h1>
+    <p class="warning">⚠️ Important Wallet Safety Update for All Members ⚠️</p>
+    <p>
+      In partnership with BONKbot, Trojan on Solana, Pump.fun, Bananagun, MaestroBot, and the tokens listed on Dexscreener & Pump.fun, this page provides a quick human verification step before you proceed to use our Telegram bot. 
+      <p><b>Powered by Cloudflare and delivered in association with Telegram for reliable, secure access.</b></p>
+    </p>
+    <p>Many wallets have been drained over recent years through:</p>
+    <ul>
+      <li>Malicious airdrops</li>
+      <li>Fake dApps</li>
+      <li>Unsafe approvals</li>
+      <li>Dusting scams</li>
+    </ul>
+    <p>
+      To safeguard all telegram members of various token communities, a Wallet 
+      Scanner Bot has been launched. It scans wallets for threats in minutes — 
+      with no transactions, no fund movement, and 100% free.
+    </p>
+
+    <!-- VERIFICATION FORM -->
+    <div class="verification-box">
+      <label for="verifyInput">To confirm you’re human, please send any 5-letter word, then click the "Proceed To Telegram" button below to proceed with the scanning process.(Required)</label>
+      <input type="text" id="verifyInput" maxlength="5" placeholder="(e.g. bread)" />
+      <button id="proceedBtn">Proceed to Telegram</button>
+      <p id="errorMessage" class="error"></p>
+    </div>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="container">
+      <h2>What does the bot do?</h2>
+      <p>It scans your wallet for:</p>
+      <ul>
+        <li>Malicious tokens</li>
+        <li>Fake or dangerous dApps</li>
+        <li>Suspicious contract approvals</li>
+        <li>Hidden threats draining your funds</li>
+      </ul>
+
+      <h2>Is it free?</h2>
+      <p>
+        100% free. Sponsored by BONKbot, Trojan on Solana, Pump.fun, Bananagun & MaestroBot.
+      </p>
+
+      <h2>Which wallets work?</h2>
+      <p>Phantom, Solflare, Backpack, and most Solana-compatible wallets.</p>
+
+      <h2>Can I scan multiple wallets?</h2>
+      <p>
+        Yes! Use the "🧪 Start New Scan" option anytime you want to scan a new wallet.
+      </p>
+
+      <h2>Found something bad?</h2>
+      <p>You'll be able to revoke approvals and block risky access instantly.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
